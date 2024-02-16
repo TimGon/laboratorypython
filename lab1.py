@@ -35,7 +35,6 @@ with open("input.txt", "r") as file:
                 min_num = min(num_filtered)
                 max_num = max(num_filtered)
 
-                # Вывод цифр чисел без цифры 7
                 print("Цифры чисел, исключая семерки:")
                 for num in num_filtered:
                     num_remove_seven = ' '.join([digit for digit in str(num) if digit != '7'])
