@@ -48,20 +48,17 @@ with open("input.txt", "r", encoding='utf-8') as file:
 if num_filtered:
     print("Список чисел, удовлетворяющих условию:")
     print(num_filtered)
+    min_num = min(num_filtered)
+    max_num = max(num_filtered)
 
-    if num_filtered:
-        min_num = min(num_filtered)
-        max_num = max(num_filtered)
+    print("Цифры чисел, исключая семерки:")
+    for num in num_filtered:
+        num_remove_seven = ''.join([digit for digit in str(abs(num)) if digit != '7'])
+        print(num_remove_seven)
 
-        print("Цифры чисел, исключая семерки:")
-        for num in num_filtered:
-            num_remove_seven = ''.join([digit for digit in str(abs(num)) if digit != '7'])
-            print(num_remove_seven)
+    avg_num = (min_num + max_num) // 2
+    avg_num_words = ' '.join([digit_to_word[digit] for digit in str(abs(avg_num))])
+    print(f"Среднее число между минимальным ({min_num}) и максимальным ({max_num}): {avg_num_words}")
 
-        avg_num = (min_num + max_num) // 2
-        avg_num_words = ' '.join([digit_to_word[digit] for digit in str(abs(avg_num))])
-        print(f"Среднее число между минимальным ({min_num}) и максимальным ({max_num}): {avg_num_words}")
-    else:
-        print("Нет чисел, удовлетворяющих условию.")
 else:
     print("Нет чисел для обработки.")
