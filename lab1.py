@@ -13,7 +13,7 @@ digit_to_word = {'0': 'ноль', '1': 'один', '2': 'два', '3': 'три',
 min_num = 0
 max_num = 10000
 num_filtered = []
-file = open("input.txt", "r", encoding="utf-8")
+file = open("text.txt", "r", encoding="utf-8")
 
 while True:
     str_txt = file.readline().split()
