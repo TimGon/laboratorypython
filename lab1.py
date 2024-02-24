@@ -13,7 +13,6 @@ digit_to_word = {'0': 'ноль', '1': 'один', '2': 'два', '3': 'три',
 min_num = 0
 max_num = 10000
 num_filtered = []
-num_remove_seven = []
 file = open("input.txt", "r", encoding="utf-8")
 
 while True:
