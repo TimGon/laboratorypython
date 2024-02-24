@@ -18,7 +18,6 @@ file = open("input.txt", "r", encoding="utf-8")
 
 while True:
     str_txt = file.readline().split()
-    print(str_txt)
     if not str_txt:
         print("\nФайл input.txt в директории проекта закончился")
         break
