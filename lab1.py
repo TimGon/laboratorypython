@@ -28,7 +28,7 @@ while True:
             if num.startswith('-'):
                 flag_negative = True
                 num = num[1:]
-            if all(val not in symb_punct and not val.isalpha() and '0' <= val <= '7' for val in num):
+            if all(val not in symb_punct and not val.isalpha() and '0' <= val <= '7' for val in num) and len(num) > 1:
                 if int(num) % 2 != 0 and len(num) < 5 and num[-2] == '7':
                     if flag_negative:
                         num = -int(num)
@@ -37,7 +37,7 @@ if num_filtered:
     print("Список чисел, удовлетворяющих условию:\n",num_filtered)
     min_num = min(num_filtered)
     max_num = max(num_filtered)
-
+    
     print("Цифры чисел, исключая семерки:")
     for num in num_filtered:
         num_remove_seven = ''.join([digit for digit in str(abs(num)) if digit != '7'])
